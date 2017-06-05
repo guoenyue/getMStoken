@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隐式登录</title>
+</head>
+<body>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+	<script>
+		var search=parseSearch(window.location.search.substr(1));
+		console.log(search);
+		//console.log(JSON.parse(encodeURI(search.state)));
+
+		var postVal="client_id=ebef797a-c432-46cc-bc24-eba3fad9c5d7&scope=openid user.read mail.read&code="+search.code+"&redirect_uri=https%3A%2F%2Fgithub.com%2Fguoenyue%2FgetMStoken%2Fdemo.html&grant_type=authorization_code&client_secret=4bypk45U8nACbx4FUgSWgfN";
+		// var xhr=new XMLHttpRequest();
+		// xhr.onload=function(re){
+		// 	console.log(xhr.responseText);
+		// 	//cb.call(xhr,xhr.responseText);
+		// }
+		// xhr.open("post","https://login.microsoftonline.com/common/oauth2/token",true);
+
+		// // xhr.setRequestHeader("Authorization","Basic MTExOjExMQ==");
+		// xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		// xhr.send(postVal);
+
+		$(function(){
+			$.ajax({
+				method:"post",
+				url:"https://login.microsoftonline.com/common/oauth2/token",
+				data:postVal
+			}).success(function(re){
+				console.log(re);
+			})
+		});
+
+
+
+		function cb(re){
+			$.ajax({
+				method:"get",
+				url:"https://graph.microsoft.com/v1.0/me"
+			}).success(function(res){
+				console.log(res);
+			})
+		}
+		function parseSearch(search){
+			var oSearch={};
+			var retArr=search.split("&").map(function(item,i){
+				var tmpArr=item.split("=");
+				oSearch[tmpArr[0]]=tmpArr[1];
+				return item.split("=");
+			});
+			return oSearch;
+		}
+	</script>
+</body>
+</html>
