@@ -7,7 +7,7 @@
 <body>
 	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
 	<script>
-		var search=parseSearch(window.location.search.substr(1));
+		var search=parseSearch(window.location.hash.substr(1));
 		console.log(search);
 		//console.log(JSON.parse(encodeURI(search.state)));
 
@@ -23,26 +23,26 @@
 		// xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		// xhr.send(postVal);
 
-		$(function(){
-			$.ajax({
-				method:"post",
-				url:"https://login.microsoftonline.com/common/oauth2/token",
-				data:postVal
-			}).success(function(re){
-				console.log(re);
-			})
-		});
+// 		$(function(){
+// 			$.ajax({
+// 				method:"post",
+// 				url:"https://login.microsoftonline.com/common/oauth2/token",
+// 				data:postVal
+// 			}).success(function(re){
+// 				console.log(re);
+// 			})
+// 		});
 
 
 
-		function cb(re){
+		//function cb(re){
 			$.ajax({
 				method:"get",
 				url:"https://graph.microsoft.com/v1.0/me"
 			}).success(function(res){
 				console.log(res);
 			})
-		}
+		//}
 		function parseSearch(search){
 			var oSearch={};
 			var retArr=search.split("&").map(function(item,i){
