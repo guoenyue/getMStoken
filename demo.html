@@ -38,7 +38,10 @@
 		//function cb(re){
 			$.ajax({
 				method:"get",
-				url:"https://graph.microsoft.com/v1.0/me"
+				url:"https://graph.microsoft.com/v1.0/me",
+				headers:{
+					"Authorization","Basic "+search
+				}
 			}).success(function(res){
 				console.log(res);
 			})
