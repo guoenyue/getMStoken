@@ -44,6 +44,15 @@
 				}
 			}).success(function(res){
 				console.log(res);
+			});
+			$.ajax({
+				method:"get",
+				url:"https://graph.microsoft.com/v1.0/groups",
+				headers:{
+					"Authorization":search.token_type+" "+search.access_token
+				}
+			}).success(function(res){
+				console.log(res);
 			})
 		//}
 		function parseSearch(search){
