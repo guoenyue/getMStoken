@@ -11,7 +11,11 @@
 		var search=parseSearch(window.location.hash.substr(1));
 		console.log(search);
 		//console.log(JSON.parse(encodeURI(search.state)));
-
+		if(search.error){
+			console.log(search.error);
+			console.log(search.error_description);
+			return false;
+		}
 		var postVal="client_id=ebef797a-c432-46cc-bc24-eba3fad9c5d7&scope=openid user.read mail.read&code="+search.code+"&redirect_uri=https%3A%2F%2Fguoenyue.github.io%2FgetMStoken%2Fdemo.html&grant_type=authorization_code&client_secret=4bypk45U8nACbx4FUgSWgfN";
 		// var xhr=new XMLHttpRequest();
 		// xhr.onload=function(re){
