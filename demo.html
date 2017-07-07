@@ -14,7 +14,17 @@
 		if(search.error){
 			console.log(search.error);
 			console.log(search.error_description);
-			return false;
+			window.location.href='./index.html';
+		}else{
+			$.ajax({
+				method:"get",
+				url:"https://graph.microsoft.com/v1.0/me",
+				headers:{
+					"Authorization":search.token_type+" "+search.access_token
+				}
+			}).success(function(res){
+				console.log(res);
+			});
 		}
 		var postVal="client_id=ebef797a-c432-46cc-bc24-eba3fad9c5d7&scope=openid user.read mail.read&code="+search.code+"&redirect_uri=https%3A%2F%2Fguoenyue.github.io%2FgetMStoken%2Fdemo.html&grant_type=authorization_code&client_secret=4bypk45U8nACbx4FUgSWgfN";
 		// var xhr=new XMLHttpRequest();
@@ -41,15 +51,7 @@
 
 
 		//function cb(re){
-			$.ajax({
-				method:"get",
-				url:"https://graph.microsoft.com/v1.0/me",
-				headers:{
-					"Authorization":search.token_type+" "+search.access_token
-				}
-			}).success(function(res){
-				console.log(res);
-			});
+			
 			/*$.ajax({
 				method:"get",
 				url:"https://graph.microsoft.com/v1.0/groups",
