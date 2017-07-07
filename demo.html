@@ -5,6 +5,7 @@
 	<title>隐式登录</title>
 </head>
 <body>
+	<button id='logoutbtn'>退出登录</button>
 	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
 	<script>
 		var search=parseSearch(window.location.hash.substr(1));
@@ -55,6 +56,12 @@
 				console.log(res);
 			})*/
 		//}
+		
+		
+		$("#logoutbtn").on("click",function(){
+			window.loadtion.href=https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=https%3A%2F%2Fguoenyue.github.io%2FgetMStoken%2Flogout.html
+		})
+		
 		function parseSearch(search){
 			var oSearch={};
 			var retArr=search.split("&").map(function(item,i){
