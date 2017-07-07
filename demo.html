@@ -11,11 +11,13 @@
 		var search=parseSearch(window.location.hash.substr(1));
 		console.log(search);
 		//console.log(JSON.parse(encodeURI(search.state)));
+		//当登录失败（比如权限不通过或者其他问题）之后会返回一个error代码
 		if(search.error){
 			console.log(search.error);
 			console.log(search.error_description);
 			window.location.href='./index.html';
 		}else{
+			//当正确的时候才进行数据的申请
 			$.ajax({
 				method:"get",
 				url:"https://graph.microsoft.com/v1.0/me",
