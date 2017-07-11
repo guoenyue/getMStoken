@@ -34,3 +34,4 @@ logout.html是退出登录的返回页
 还可以是organizations【仅拥有工作/学校帐户的用户】可以从 Azure AD 登录到应用程序。
 或者consumers【仅拥有 Microsoft 个人帐户的用户】可以登录到应用程序。
 还可以是租户在应用程序中的唯一标识。
+详细说明请查看手册：https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-oidc
