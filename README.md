@@ -27,9 +27,9 @@ Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的[地址](ht
  https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?xxx
  
 ###   其中tenant
-1   可以是common【default】对登录无限制
-2   还可以是github.com【domain】限制域名
-3   还可以是organizations【仅拥有工作/学校帐户的用户】可以从 Azure AD 登录到应用程序。
-4   或者consumers【仅拥有 Microsoft 个人帐户的用户】可以登录到应用程序。
-5   还可以是租户在应用程序中的唯一标识。
+1.   可以是common【default】对登录无限制
+2.   还可以是github.com【domain】限制域名
+3.   还可以是organizations【仅拥有工作/学校帐户的用户】可以从 Azure AD 登录到应用程序。
+4.   或者consumers【仅拥有 Microsoft 个人帐户的用户】可以登录到应用程序。
+5.   还可以是租户在应用程序中的唯一标识。
     详细说明请查看[手册](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-oidc)
