@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Authorization授权方式授予</title>
+</head>
+<body>
+	<p>Authorization授权方式较隐式授予繁琐，并且会有刷新令牌的代码</p>
+	<script type="text/javascript">
+		var clientId="bd3ab4b7-6744-4f76-82e6-82094ea9238a";
+
+		var loginUrl="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?";
+		
+		var locationGetUrl=loginUrl+"client_id="+clientId+"&response_type=code&response_mode=query&scope=openid%20offline_access%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&state=12345&redirect_uri="+encodeURIComponent("https://guoenyue.github.io/getMStoken/Authorization/login.html");
+
+		window.location.href=locationGetUrl;
+
+
+
+
+
+	</script>
+</body>
+</html>

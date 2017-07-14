@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var search=parseSearch(window.location.hash.substr(1));
+		
+
+		var clientId="bd3ab4b7-6744-4f76-82e6-82094ea9238a";
+
+		var loginUrl="https://login.microsoftonline.com/common/oauth2/v2.0/token";
+
+		var locationGetUrl="client_id="+clientId+"&code="+search.code+"&grant_type=authorization_code&response_mode=query&scope=https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&state=12345&redirect_uri="+encodeURIComponent("https://guoenyue.github.io/getMStoken/Authorization/loginProxy.html");
+
+
+
+
+
+
+
+
+
+
+
+
+
+		$(function(){
+			$.ajax({
+				method:"post",
+				url:loginUrl,
+				data:locationGetUrl
+			}).success(function(re){
+				console.log(re);
+			})
+		});
+
+
+
+		function parseSearch(search){
+			var oSearch={};
+			var retArr=search.split("&").map(function(item,i){
+				var tmpArr=item.split("=");
+				oSearch[tmpArr[0]]=tmpArr[1];
+				return item.split("=");
+			});
+			return oSearch;
+		}
+	</script>
+</body>
+</html>
