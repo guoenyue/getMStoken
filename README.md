@@ -7,32 +7,29 @@
 
 微软的office 365有两套api都是通过azure来操作
 
-Azure AD1.0版本的使用 OpenID Connect 来访问web应用程序的地址：
-
-  https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code
+Azure AD1.0版本的使用 OpenID Connect 来访问web应用程序的[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
   
   
-Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的地址：
-
-  https://developer.microsoft.com/zh-cn/graph/docs/concepts/auth_v2_user
+Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的[地址](https://developer.microsoft.com/zh-cn/graph/docs/concepts/auth_v2_user)
   
   
-本例子中的文件功能说明
+## 本例子中的文件功能说明
 
-本例子使用2.0版本的api请求资源
+    本例子使用2.0版本的api请求资源
 
-index.html将进行登录跳转
+*	index.html将进行登录跳转
 
-demo.html是跳转成功的返回页，此页面会得到token，通过请求头可以申请各类有权限的信息
+*	demo.html是跳转成功的返回页，此页面会得到token，通过请求头可以申请各类有权限的信息
 
-logout.html是退出登录的返回页
+*	logout.html是退出登录的返回页
 
-登出权限说明：
+##  登出权限说明：
  https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?xxx
  
-其中tenant可以是common【default】对登录无限制
-还可以是github.com【domain】限制域名
-还可以是organizations【仅拥有工作/学校帐户的用户】可以从 Azure AD 登录到应用程序。
-或者consumers【仅拥有 Microsoft 个人帐户的用户】可以登录到应用程序。
-还可以是租户在应用程序中的唯一标识。
-详细说明请查看手册：https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-oidc
+###   其中tenant
+1   可以是common【default】对登录无限制
+2   还可以是github.com【domain】限制域名
+3   还可以是organizations【仅拥有工作/学校帐户的用户】可以从 Azure AD 登录到应用程序。
+4   或者consumers【仅拥有 Microsoft 个人帐户的用户】可以登录到应用程序。
+5   还可以是租户在应用程序中的唯一标识。
+    详细说明请查看[手册](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-oidc)
