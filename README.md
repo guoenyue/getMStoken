@@ -12,7 +12,7 @@
 
 >>微软的office 365有两套api都是通过azure来操作
 
->>Azure AD1.0版本的使用 * OpenID Connect * 来访问web应用程序的[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
+>>Azure AD1.0版本的使用 *OpenID Connect* 来访问web应用程序的[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
   
   
 >>Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的[地址](https://developer.microsoft.com/zh-cn/graph/docs/concepts/auth_v2_user)
