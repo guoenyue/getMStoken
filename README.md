@@ -8,14 +8,14 @@
 
 >本例子采用oAuch2.0(注意区分AAD2.0)并通过AAD2.0来获取token采用隐式授权的方式
 
-	>>官网手册[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-implicit)
+	>官网手册[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-v2-protocols-implicit)
 
 >微软的office 365有两套api都是通过azure来操作
 
-	>>Azure AD1.0版本的使用 * OpenID Connect * 来访问web应用程序的[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
+	>Azure AD1.0版本的使用 * OpenID Connect * 来访问web应用程序的[地址](https://docs.microsoft.com/zh-cn/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
   
   
-	>>Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的[地址](https://developer.microsoft.com/zh-cn/graph/docs/concepts/auth_v2_user)
+	>Azure AD2.0版本的使用 OpenID Connect 来访问web应用程序的[地址](https://developer.microsoft.com/zh-cn/graph/docs/concepts/auth_v2_user)
   
   
 ## 本例子中的文件功能说明
